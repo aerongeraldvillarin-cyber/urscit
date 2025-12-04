@@ -1,0 +1,257 @@
+/* GLOBAL STYLE */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f6f1f3;   /* soft pink-maroony background */
+    color: #2a2a2a;
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background: #800000; /* MAIN MAROON COLOR */
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+#navMenu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#navMenu a:hover {
+    color: #ffd4ba;
+}
+
+.menu-btn {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #800000, #a00000);
+    color: white;
+    text-align: center;
+    padding: 70px 30px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h2 {
+    font-size: 42px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTIONS */
+.section {
+    padding: 50px 20px;
+}
+
+.section.light {
+    background: #ffeaea; /* very light maroon tint */
+}
+
+.section h2 {
+    text-align: center;
+    color: #800000;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* DEAN SECTION */
+.dean-card {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    border-left: 6px solid #800000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dean-img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #800000;
+}
+
+.dean-info {
+    flex: 1;
+    padding-top: 10px;
+}
+
+/* BUTTONS */
+.primary {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.primary:hover {
+    background: #9b0000;
+}
+
+.small-btn {
+    background: #800000;
+    color: white;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ORGANIZATION SECTION */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.org-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 5px solid #800000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: .3s;
+}
+
+.org-card:hover {
+    transform: scale(1.05);
+}
+
+/* PROGRAMS SECTION */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.program-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #800000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.program-card:hover {
+    background: #fff2f2;
+    transform: scale(1.05);
+}
+
+.program-card p.hidden {
+    display: none;
+}
+
+/* FACULTY SECTION */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.faculty-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #800000;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.faculty-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* CONTACT FORM */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #c29a9a;
+    border-radius: 8px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #800000;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* RESPONSIVENESS */
+@media (min-width: 768px) {
+    #navMenu {
+        display: block !important;
+    }
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .dean-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
